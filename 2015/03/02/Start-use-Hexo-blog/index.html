@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Mac中Hexo博客安装与使用教程 | Jack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hexo是一款轻量级的使用node.js平台的博客框架，与Jekyll和Octopress类似，使用Markdown来解析文章，但不同于Jekyll和Octopress的是，Hexo的编译速度非常快，据说Octopress微博适量达到50以上编译速度就会慢上几分钟之多，但是Hexo只需要几秒钟就可以了。本文来教大家如何在Mac中搭建Hexo，以及日常如何使用Hexo写博客，希望你看完本篇文章也加入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac中Hexo博客安装与使用教程">
+<meta property="og:url" content="http://jakeq.github.com/2015/03/02/Start-use-Hexo-blog/index.html">
+<meta property="og:site_name" content="Jack">
+<meta property="og:description" content="Hexo是一款轻量级的使用node.js平台的博客框架，与Jekyll和Octopress类似，使用Markdown来解析文章，但不同于Jekyll和Octopress的是，Hexo的编译速度非常快，据说Octopress微博适量达到50以上编译速度就会慢上几分钟之多，但是Hexo只需要几秒钟就可以了。本文来教大家如何在Mac中搭建Hexo，以及日常如何使用Hexo写博客，希望你看完本篇文章也加入">
+<meta property="og:image" content="/images/Github+Hexo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac中Hexo博客安装与使用教程">
+<meta name="twitter:description" content="Hexo是一款轻量级的使用node.js平台的博客框架，与Jekyll和Octopress类似，使用Markdown来解析文章，但不同于Jekyll和Octopress的是，Hexo的编译速度非常快，据说Octopress微博适量达到50以上编译速度就会慢上几分钟之多，但是Hexo只需要几秒钟就可以了。本文来教大家如何在Mac中搭建Hexo，以及日常如何使用Hexo写博客，希望你看完本篇文章也加入">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Jack" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="https://avatars3.githubusercontent.com/u/7218465?v=3&amp;s=460">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jack</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Inspire and empower</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives">rchives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/jakeq/" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1977153227/" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/blog/" style="font-size: 20px;">blog</a><a href="/tags/hexo/" style="font-size: 10px;">hexo</a><a href="/tags/rails/" style="font-size: 10px;">rails</a><a href="/tags/ruby/" style="font-size: 10px;">ruby</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://hexo.io/zh-cn/">Hexo</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是Jack，从事IOS开发，喜欢Ruby，你呢？</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Jack</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars3.githubusercontent.com/u/7218465?v=3&amp;s=460">
+				<hgroup>
+				  <h1 class="header-author">Jack</h1>
+				</hgroup>
+			</div>
+			
+			<p class="header-subtitle">Inspire and empower</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">rchives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jakeq/" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1977153227/" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Start-use-Hexo-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/02/Start-use-Hexo-blog/" class="article-date">
+  	<time datetime="2015-03-02T14:23:35.000Z" itemprop="datePublished">2015-03-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Mac中Hexo博客安装与使用教程
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/Github+Hexo.png" alt="Git Hexo"><br><a href="http://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a>是一款轻量级的使用node.js平台的博客框架，与Jekyll和Octopress类似，使用Markdown来解析文章，但不同于Jekyll和Octopress的是，Hexo的编译速度非常快，据说Octopress微博适量达到50以上编译速度就会慢上几分钟之多，但是Hexo只需要几秒钟就可以了。本文来教大家如何在Mac中搭建Hexo，以及日常如何使用Hexo写博客，希望你看完本篇文章也加入到Hexo大家庭中来！<br><a id="more"></a></p>
+<h2 id="安装">安装</h2><p>首先你要确认自己的电脑上必须安装了以下的环境</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+<p>如果你的电脑已经符合这些条件，你就可以使用<code>npm</code>很简单地安装Hexo:<br><code>$ npm install -g hexo-cli</code></p>
+<h2 id="建站">建站</h2><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件<br><figure class="highlight elixir"><figcaption><span>bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init &lt;folder&gt;</span><br><span class="line"><span class="variable">$ </span>cd &lt;folder&gt;</span><br><span class="line"><span class="variable">$ </span>npm install</span><br></pre></td></tr></table></figure><br>新建完成后，指定文件夹的目录如下：</p>
+<pre><code>.
+├── _config.yml
+├── package.json
+├── scaffolds
+├── scripts
+├── source
+<span class="string">|   ├── _drafts</span>
+<span class="string">|   └── _posts</span>
+└── themes
+</code></pre><h2 id="配置">配置</h2><p>您可以在 <code>_config.yml</code> 中修改大部份的配置。具体可参考<a href="http://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">Hexo官方网站</a>进行配置，这里就不赘言了。</p>
+<h2 id="指令">指令</h2><p>在日常使用中，你会用到以下指令</p>
+<h3 id="1-新建站">1.新建站</h3><pre><code>$ <span class="tag">hexo</span> <span class="tag">init</span> <span class="attr_selector">[folder]</span>
+</code></pre><p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br>例如：</p>
+<pre><code><span class="variable">$ </span>hexo init myblog
+</code></pre><h3 id="2-新建文章">2.新建文章</h3><pre><code>$ hexo <span class="keyword">new</span> [layout] &lt;title&gt;
+</code></pre><p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。<br>例如：</p>
+<pre><code>$ hexo <span class="keyword">new</span> <span class="string">"my new post"</span>
+</code></pre><h3 id="3-生成静态文件">3.生成静态文件</h3><pre><code><span class="variable">$ </span>hexo generate
+</code></pre><p>或者</p>
+<pre><code><span class="variable">$ </span>hexo g
+</code></pre><p>在把文章发布到网站之前，我们必须先把网站编译成静态文件，这是必须的操作。</p>
+<h3 id="4-本地测试">4.本地测试</h3><pre><code>$ hexo <span class="keyword">server</span>
+</code></pre><p>你可以使用这个命令来启动本地测试服务器来测试你生成的博客，点击这里测试<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
+<h3 id="5-部署网站">5.部署网站</h3><pre><code><span class="variable">$ </span>hexo deploy
+</code></pre><p>或者</p>
+<pre><code><span class="variable">$ </span>hexo d
+</code></pre><p>如果你在<code>_config.yml</code>配置文件中设置了部署环境，你就可以轻松的使用这条命令来把编译好的网站发布到你的远程服务器中。<br>你也可以使用同时便已部署命令来同时执行<code>generate</code>和<code>deploy</code>命令</p>
+<pre><code>$ hexo <span class="keyword">d</span> -<span class="keyword">g</span>
+</code></pre><p><strong>* Github部署设置</strong></p>
+<p>首先需要安装<a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">hexo-deployer-git</a></p>
+<pre><code>$ npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span>
+</code></pre><p>修改配置文件<code>_config.yml</code></p>
+<pre><code><span class="string">deploy:</span>
+<span class="string">type:</span> git
+<span class="string">repo:</span> &lt;repository url&gt;
+<span class="string">branch:</span> [branch]   <span class="comment">//分支名称，程序会尝试自动检测，可以为空</span>
+<span class="string">message:</span> [message] <span class="comment">//自定提交信息，可以为空</span>
+</code></pre><p><strong>* Heroku部署设置</strong></p>
+<p>首先需要安装<a href="https://github.com/hexojs/hexo-deployer-heroku" target="_blank" rel="external">hexo-deployer-heroku</a></p>
+<pre><code>$ npm <span class="operator"><span class="keyword">install</span> hexo-deployer-heroku <span class="comment">--save</span></span>
+</code></pre><p>修改配置文件<code>_config.yml</code></p>
+<pre><code><span class="string">deploy:</span>
+<span class="string">type:</span> heroku
+<span class="string">repo:</span> &lt;repository url&gt;
+<span class="string">message:</span> [message] <span class="comment">//自定提交信息，可以为空</span>
+</code></pre><h2 id="主题">主题</h2><p>创建 Hexo 主题非常容易，您只要在 <code>themes</code> 文件夹内，新增一个任意名称的文件夹，并修改 <code>_config.yml</code> 内的 <code>theme</code> 设定，即可切换主题。一个主题可能会有以下的结构：  </p>
+<pre><code>.
+├── _config.yml
+├── languages
+├── <span class="keyword">layout</span>
+├── scripts
+└── <span class="keyword">source</span>
+</code></pre><p><a href="https://github.com/hexojs/hexo/wiki/themes" target="_blank" rel="external">wiki</a>上有很多Hexo主题供你挑选。</p>
+<h2 id="写博文">写博文</h2><p>Hexo是使用Markdown语言编写的，具体可参见<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown语法说明</a></p>
+<h2 id="后记">后记</h2><p>Hexo的安装和使用的简单教程到此结束了，后续问题请查看我的其他博文！</p>
+
+        
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/03/03/Blog-frameworks/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Blog框架汇总
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Start-use-Hexo-blog" data-title="Mac中Hexo博客安装与使用教程" data-url="http://jakeq.github.com/2015/03/02/Start-use-Hexo-blog/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jackq"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+	
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Jack
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>
