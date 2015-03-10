@@ -111,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/blog/" style="font-size: 20px;">blog</a><a href="/tags/hexo/" style="font-size: 10px;">hexo</a><a href="/tags/rails/" style="font-size: 10px;">rails</a><a href="/tags/ruby/" style="font-size: 10px;">ruby</a>
+						<a href="/tags/blog/" style="font-size: 20px;">blog</a><a href="/tags/hexo/" style="font-size: 10px;">hexo</a><a href="/tags/ios/" style="font-size: 10px;">ios</a><a href="/tags/os-x/" style="font-size: 20px;">os x</a><a href="/tags/rails/" style="font-size: 10px;">rails</a><a href="/tags/ruby/" style="font-size: 10px;">ruby</a>
 					</div>
 				</section>
 				
@@ -178,6 +178,124 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-os-x中将NSData保存文件到桌面" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/10/os-x中将NSData保存文件到桌面/" class="article-date">
+  	<time datetime="2015-03-10T04:12:52.000Z" itemprop="datePublished">2015-03-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/10/os-x中将NSData保存文件到桌面/">os x中将NSData保存文件到桌面</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>把String转成NSData<br><figure class="highlight stylus"><figcaption><span>swift</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">var</span> str = <span class="string">"ok"</span><span class="comment">//String</span></span><br><span class="line"><span class="tag">var</span> data = str.<span class="function"><span class="title">dataUsingEncoding</span><span class="params">(NSUTF8StringEncoding, allowLossyConversion: true)</span></span><span class="comment">//NSData</span></span><br></pre></td></tr></table></figure></p>
+<p>把NSData转换成其他文件存储在桌面上<br><figure class="highlight swift"><figcaption><span>swift</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pathArr = <span class="type">NSSearchPathForDirectoriesInDomains</span>(<span class="type">NSSearchPathDirectory</span>.<span class="type">DesktopDirectory</span>, <span class="type">NSSearchPathDomainMask</span>.<span class="type">UserDomainMask</span>, <span class="built_in">true</span>)</span><br><span class="line"><span class="keyword">var</span> path = (pathArr[<span class="number">0</span>] <span class="keyword">as</span> <span class="type">String</span>) + <span class="string">"/temp.sml"</span></span><br><span class="line"><span class="keyword">var</span> b = data!.writeToFile(path, atomically: <span class="built_in">true</span>)</span><br><span class="line"><span class="keyword">if</span> b &#123;</span><br><span class="line">    <span class="built_in">println</span>(<span class="string">"存储成功"</span>)</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">println</span>(<span class="string">"存储失败"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+        
+          <!-- show an end symbol if the article is fully displayed -->
+          <hr/>
+          <p class="article-more-link">
+            <a>end</a>
+          </p>
+        
+      
+    </div>
+    
+    <div class="article-info">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-NSString去除空格和回车" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/10/NSString去除空格和回车/" class="article-date">
+  	<time datetime="2015-03-10T04:04:20.000Z" itemprop="datePublished">2015-03-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/10/NSString去除空格和回车/">String去除空格和回车</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight stylus"><figcaption><span>swift</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">var</span> str = <span class="string">"ok"</span></span><br><span class="line">str.<span class="function"><span class="title">stringByTrimmingCharactersInSet</span><span class="params">(NSCharacterSet.newlineCharacterSet()</span></span>)<span class="comment">//去掉回车</span></span><br><span class="line">str.<span class="function"><span class="title">stringByTrimmingCharactersInSet</span><span class="params">(NSCharacterSet.whitespaceAndNewlineCharacterSet()</span></span>)<span class="comment">//去掉空格和回车</span></span><br><span class="line">str.<span class="function"><span class="title">stringByTrimmingCharactersInSet</span><span class="params">(NSCharacterSet.whitespaceCharacterSet()</span></span>)<span class="comment">//去掉空格</span></span><br></pre></td></tr></table></figure>
+        
+          <!-- show an end symbol if the article is fully displayed -->
+          <hr/>
+          <p class="article-more-link">
+            <a>end</a>
+          </p>
+        
+      
+    </div>
+    
+    <div class="article-info">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
   
     <article id="post-Ruby-and-Rails-materials" class="article article-type-post" itemscope itemprop="blogPost">
   
