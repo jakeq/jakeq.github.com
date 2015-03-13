@@ -3,20 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>os x中TableView一行被选取事件 | Jack</title>
+  <title>当超过一个TextField来设置Delegate时候回调方法如何区分？ | Jack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在os x开发中，tableview一行被选取是使用tableview委托来实现的。首先要实现tableviewdelegate委托，然后再实现其tableViewSelectionDidChange方法。当被选取行改变时候会调用此方法。
-swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;#123">
+  <meta name="description" content="TextField要实现检测输入结束的动作，需要先继承TextFieldDelegate协议，然后重写controlTextDidEndEditing(obj: NSNotification)方法。当TextField输入结束后会调用这个方法。但是这里有个问题，如果界面上不止一个TextField，所有的TextField的Delegate都指向了同一个Controller，那么每个TextFie">
 <meta property="og:type" content="article">
-<meta property="og:title" content="os x中TableView一行被选取事件">
-<meta property="og:url" content="http://jakeq.github.com/2015/03/13/TableView-select-action/index.html">
+<meta property="og:title" content="当超过一个TextField来设置Delegate时候回调方法如何区分？">
+<meta property="og:url" content="http://jakeq.github.com/2015/03/13/more-than-one-TextFieldDelegate/index.html">
 <meta property="og:site_name" content="Jack">
-<meta property="og:description" content="在os x开发中，tableview一行被选取是使用tableview委托来实现的。首先要实现tableviewdelegate委托，然后再实现其tableViewSelectionDidChange方法。当被选取行改变时候会调用此方法。
-swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;#123">
+<meta property="og:description" content="TextField要实现检测输入结束的动作，需要先继承TextFieldDelegate协议，然后重写controlTextDidEndEditing(obj: NSNotification)方法。当TextField输入结束后会调用这个方法。但是这里有个问题，如果界面上不止一个TextField，所有的TextField的Delegate都指向了同一个Controller，那么每个TextFie">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="os x中TableView一行被选取事件">
-<meta name="twitter:description" content="在os x开发中，tableview一行被选取是使用tableview委托来实现的。首先要实现tableviewdelegate委托，然后再实现其tableViewSelectionDidChange方法。当被选取行改变时候会调用此方法。
-swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;#123">
+<meta name="twitter:title" content="当超过一个TextField来设置Delegate时候回调方法如何区分？">
+<meta name="twitter:description" content="TextField要实现检测输入结束的动作，需要先继承TextFieldDelegate协议，然后重写controlTextDidEndEditing(obj: NSNotification)方法。当TextField输入结束后会调用这个方法。但是这里有个问题，如果界面上不止一个TextField，所有的TextField的Delegate都指向了同一个Controller，那么每个TextFie">
 
   
     <link rel="alternative" href="/atom.xml" title="Jack" type="application/atom+xml">
@@ -180,11 +177,11 @@ swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-TableView-select-action" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-more-than-one-TextFieldDelegate" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/13/TableView-select-action/" class="article-date">
-  	<time datetime="2015-03-13T08:35:40.000Z" itemprop="datePublished">2015-03-13</time>
+      <a href="/2015/03/13/more-than-one-TextFieldDelegate/" class="article-date">
+  	<time datetime="2015-03-13T11:23:10.000Z" itemprop="datePublished">2015-03-13</time>
 </a>
     </div>
   
@@ -197,7 +194,7 @@ swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;
         
   
     <h1 class="article-title" itemprop="name">
-      os x中TableView一行被选取事件
+      当超过一个TextField来设置Delegate时候回调方法如何区分？
     </h1>
   
 
@@ -217,9 +214,7 @@ swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在os x开发中，tableview一行被选取是使用tableview委托来实现的。首先要实现tableviewdelegate委托，然后再实现其tableViewSelectionDidChange方法。当被选取行改变时候会调用此方法。</p>
-<figure class="highlight swift"><figcaption><span>swift</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">tableViewSelectionDidChange</span><span class="params">(notification: NSNotification)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> tableview.selectedRow%<span class="number">2</span> == <span class="number">0</span>&#123;</span><br><span class="line">        editLineText.stringValue = lrcLirycsArr[tableview.selectedRow/<span class="number">2</span>]</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        editLineText.stringValue = lrcChineseArr[tableview.selectedRow/<span class="number">2</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>其中<code>tableview.selectedRow</code>直接可以访问当前tableview被选取的行，类型是Int</p>
+        <p>TextField要实现检测输入结束的动作，需要先继承TextFieldDelegate协议，然后重写<code>controlTextDidEndEditing(obj: NSNotification)</code>方法。当TextField输入结束后会调用这个方法。但是这里有个问题，如果界面上不止一个TextField，所有的TextField的Delegate都指向了同一个Controller，那么每个TextField输入结束都会进入到这同一个回调方法中，那在这个方法中该怎么区分是哪个TextField触发了回调呢？？<br>这里给出了解决办法：<br><a id="more"></a><br>使用tag！<br><code>controlTextDidEndEditing(obj: NSNotification)</code>这个方法的NSNotification.object!.tag可以得到是谁发出了检测信息！<br>例程如下：<br><figure class="highlight swift"><figcaption><span>swift</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="func"><span class="keyword">func</span> <span class="title">controlTextDidEndEditing</span><span class="params">(obj: NSNotification)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> obj.object!.tag() == editLineText.tag&#123;    </span><br><span class="line">        <span class="keyword">if</span> tableview.selectedRow%<span class="number">2</span> == <span class="number">0</span>&#123;</span><br><span class="line">            lrcLirycsArr[tableview.selectedRow/<span class="number">2</span>] = editLineText.stringValue</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            lrcChineseArr[tableview.selectedRow/<span class="number">2</span>] = editLineText.stringValue</span><br><span class="line">        &#125;</span><br><span class="line">        tableview.reloadData()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
         
       
@@ -230,18 +225,9 @@ swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;
     
 <nav id="article-nav">
   
-    <a href="/2015/03/13/more-than-one-TextFieldDelegate/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          当超过一个TextField来设置Delegate时候回调方法如何区分？
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/03/13/swift-init-Array-with-count/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Swift中用count来批量初始化Array数组</div>
+    <a href="/2015/03/13/TableView-select-action/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">os x中TableView一行被选取事件</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -270,7 +256,7 @@ swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="TableView-select-action" data-title="os x中TableView一行被选取事件" data-url="http://jakeq.github.com/2015/03/13/TableView-select-action/"></div>
+	<div class="ds-thread" data-thread-key="more-than-one-TextFieldDelegate" data-title="当超过一个TextField来设置Delegate时候回调方法如何区分？" data-url="http://jakeq.github.com/2015/03/13/more-than-one-TextFieldDelegate/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

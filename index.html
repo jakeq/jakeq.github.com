@@ -179,6 +179,61 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-more-than-one-TextFieldDelegate" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/13/more-than-one-TextFieldDelegate/" class="article-date">
+  	<time datetime="2015-03-13T11:23:10.000Z" itemprop="datePublished">2015-03-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/13/more-than-one-TextFieldDelegate/">当超过一个TextField来设置Delegate时候回调方法如何区分？</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>TextField要实现检测输入结束的动作，需要先继承TextFieldDelegate协议，然后重写<code>controlTextDidEndEditing(obj: NSNotification)</code>方法。当TextField输入结束后会调用这个方法。但是这里有个问题，如果界面上不止一个TextField，所有的TextField的Delegate都指向了同一个Controller，那么每个TextField输入结束都会进入到这同一个回调方法中，那在这个方法中该怎么区分是哪个TextField触发了回调呢？？<br>这里给出了解决办法：<br>
+        <hr/>
+        <p class="article-more-link">
+          <a  href="/2015/03/13/more-than-one-TextFieldDelegate/#more">more >></a>
+        </p>
+      
+    </div>
+    
+    <div class="article-info">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-TableView-select-action" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
