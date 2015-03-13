@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Swift中用count来批量初始化Array数组 | Jack</title>
+  <title>os x中TableView一行被选取事件 | Jack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Swift语句中没有NSString的按照count初始化方法，但是有个语法糖可以实现
-swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeatedValue: &quot;hello&quot;)//批量初始化arr为10个&quot;hello&quot;">
+  <meta name="description" content="在os x开发中，tableview一行被选取是使用tableview委托来实现的。首先要实现tableviewdelegate委托，然后再实现其tableViewSelectionDidChange方法。当被选取行改变时候会调用此方法。
+swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;#123">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift中用count来批量初始化Array数组">
-<meta property="og:url" content="http://jakeq.github.com/2015/03/13/swift-init-String-with-count/index.html">
+<meta property="og:title" content="os x中TableView一行被选取事件">
+<meta property="og:url" content="http://jakeq.github.com/2015/03/13/TableView-select-action/index.html">
 <meta property="og:site_name" content="Jack">
-<meta property="og:description" content="Swift语句中没有NSString的按照count初始化方法，但是有个语法糖可以实现
-swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeatedValue: &quot;hello&quot;)//批量初始化arr为10个&quot;hello&quot;">
+<meta property="og:description" content="在os x开发中，tableview一行被选取是使用tableview委托来实现的。首先要实现tableviewdelegate委托，然后再实现其tableViewSelectionDidChange方法。当被选取行改变时候会调用此方法。
+swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;#123">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swift中用count来批量初始化Array数组">
-<meta name="twitter:description" content="Swift语句中没有NSString的按照count初始化方法，但是有个语法糖可以实现
-swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeatedValue: &quot;hello&quot;)//批量初始化arr为10个&quot;hello&quot;">
+<meta name="twitter:title" content="os x中TableView一行被选取事件">
+<meta name="twitter:description" content="在os x开发中，tableview一行被选取是使用tableview委托来实现的。首先要实现tableviewdelegate委托，然后再实现其tableViewSelectionDidChange方法。当被选取行改变时候会调用此方法。
+swift1234567func tableViewSelectionDidChange(notification: NSNotification) &amp;#123">
 
   
     <link rel="alternative" href="/atom.xml" title="Jack" type="application/atom+xml">
@@ -180,11 +180,11 @@ swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeate
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-swift-init-String-with-count" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-TableView-select-action" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/13/swift-init-String-with-count/" class="article-date">
-  	<time datetime="2015-03-13T07:56:46.000Z" itemprop="datePublished">2015-03-13</time>
+      <a href="/2015/03/13/TableView-select-action/" class="article-date">
+  	<time datetime="2015-03-13T08:35:40.000Z" itemprop="datePublished">2015-03-13</time>
 </a>
     </div>
   
@@ -197,7 +197,7 @@ swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeate
         
   
     <h1 class="article-title" itemprop="name">
-      Swift中用count来批量初始化Array数组
+      os x中TableView一行被选取事件
     </h1>
   
 
@@ -206,7 +206,7 @@ swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeate
       <div class="article-info">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
 	</div>
 
         
@@ -217,8 +217,9 @@ swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeate
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Swift语句中没有NSString的按照count初始化方法，但是有个语法糖可以实现</p>
-<figure class="highlight markdown"><figcaption><span>swift</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [<span class="link_label">String</span>](<span class="link_url"></span>)//初始化arr为空</span><br><span class="line">arr = [<span class="link_label">String</span>](<span class="link_url">count: 10, repeatedValue: "hello"</span>)//批量初始化arr为10个"hello"</span><br></pre></td></tr></table></figure>
+        <p>在os x开发中，tableview一行被选取是使用tableview委托来实现的。首先要实现tableviewdelegate委托，然后再实现其tableViewSelectionDidChange方法。当被选取行改变时候会调用此方法。</p>
+<figure class="highlight swift"><figcaption><span>swift</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">tableViewSelectionDidChange</span><span class="params">(notification: NSNotification)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> tableview.selectedRow%<span class="number">2</span> == <span class="number">0</span>&#123;</span><br><span class="line">        editLineText.stringValue = lrcLirycsArr[tableview.selectedRow/<span class="number">2</span>]</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        editLineText.stringValue = lrcChineseArr[tableview.selectedRow/<span class="number">2</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中<code>tableview.selectedRow</code>直接可以访问当前tableview被选取的行，类型是Int</p>
 
         
       
@@ -230,8 +231,8 @@ swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeate
 <nav id="article-nav">
   
   
-    <a href="/2015/03/10/read-xml/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ios解析xml文件</div>
+    <a href="/2015/03/13/swift-init-Array-with-count/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Swift中用count来批量初始化Array数组</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -260,7 +261,7 @@ swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeate
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="swift-init-String-with-count" data-title="Swift中用count来批量初始化Array数组" data-url="http://jakeq.github.com/2015/03/13/swift-init-String-with-count/"></div>
+	<div class="ds-thread" data-thread-key="TableView-select-action" data-title="os x中TableView一行被选取事件" data-url="http://jakeq.github.com/2015/03/13/TableView-select-action/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

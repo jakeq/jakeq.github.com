@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Jack</title>
+  <title>Swift中用count来批量初始化Array数组 | Jack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术宅的小窝">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jack">
-<meta property="og:url" content="http://jakeq.github.com/tags/ios/index.html">
+  <meta name="description" content="Swift语句中没有NSString的按照count初始化方法，但是有个语法糖可以实现
+swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeatedValue: &quot;hello&quot;)//批量初始化arr为10个&quot;hello&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift中用count来批量初始化Array数组">
+<meta property="og:url" content="http://jakeq.github.com/2015/03/13/swift-init-Array-with-count/index.html">
 <meta property="og:site_name" content="Jack">
-<meta property="og:description" content="技术宅的小窝">
+<meta property="og:description" content="Swift语句中没有NSString的按照count初始化方法，但是有个语法糖可以实现
+swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeatedValue: &quot;hello&quot;)//批量初始化arr为10个&quot;hello&quot;">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jack">
-<meta name="twitter:description" content="技术宅的小窝">
+<meta name="twitter:title" content="Swift中用count来批量初始化Array数组">
+<meta name="twitter:description" content="Swift语句中没有NSString的按照count初始化方法，但是有个语法糖可以实现
+swift12var arr = [String]()//初始化arr为空arr = [String](count: 10, repeatedValue: &quot;hello&quot;)//批量初始化arr为10个&quot;hello&quot;">
 
   
     <link rel="alternative" href="/atom.xml" title="Jack" type="application/atom+xml">
@@ -177,144 +180,114 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-swift-init-Array-with-count" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2015/03/13/swift-init-Array-with-count/" class="article-date">
+  	<time datetime="2015-03-13T07:56:46.000Z" itemprop="datePublished">2015-03-13</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Swift中用count来批量初始化Array数组
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/13/swift-init-Array-with-count/" class="archive-article-date">
-  	<time datetime="2015-03-13T07:56:46.000Z" itemprop="datePublished">Mar 13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/13/swift-init-Array-with-count/">Swift中用count来批量初始化Array数组</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Swift语句中没有NSString的按照count初始化方法，但是有个语法糖可以实现</p>
+<figure class="highlight markdown"><figcaption><span>swift</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [<span class="link_label">String</span>](<span class="link_url"></span>)//初始化arr为空</span><br><span class="line">arr = [<span class="link_label">String</span>](<span class="link_url">count: 10, repeatedValue: "hello"</span>)//批量初始化arr为10个"hello"</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+        
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/10/read-xml/" class="archive-article-date">
-  	<time datetime="2015-03-10T12:17:37.000Z" itemprop="datePublished">Mar 10</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/10/read-xml/">ios解析xml文件</a>
-    </h1>
+    <a href="/2015/03/13/TableView-select-action/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          os x中TableView一行被选取事件
+        
+      </div>
+    </a>
   
+  
+    <a href="/2015/03/10/read-xml/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ios解析xml文件</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/10/dictionary-to-json/" class="archive-article-date">
-  	<time datetime="2015-03-10T11:28:01.000Z" itemprop="datePublished">Mar 10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/10/dictionary-to-json/">Dictionary 封装入 Json</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
-	</div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="swift-init-Array-with-count" data-title="Swift中用count来批量初始化Array数组" data-url="http://jakeq.github.com/2015/03/13/swift-init-Array-with-count/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jackq"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+	
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/10/NSString-cut-space-and-newline/" class="archive-article-date">
-  	<time datetime="2015-03-10T04:04:20.000Z" itemprop="datePublished">Mar 10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/10/NSString-cut-space-and-newline/">String去除空格和回车</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 </div>
       <footer id="footer">
   <div class="outer">

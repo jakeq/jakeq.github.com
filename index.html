@@ -179,10 +179,71 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-swift-init-String-with-count" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-TableView-select-action" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/03/13/swift-init-String-with-count/" class="article-date">
+      <a href="/2015/03/13/TableView-select-action/" class="article-date">
+  	<time datetime="2015-03-13T08:35:40.000Z" itemprop="datePublished">2015-03-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/13/TableView-select-action/">os x中TableView一行被选取事件</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在os x开发中，tableview一行被选取是使用tableview委托来实现的。首先要实现tableviewdelegate委托，然后再实现其tableViewSelectionDidChange方法。当被选取行改变时候会调用此方法。</p>
+<figure class="highlight swift"><figcaption><span>swift</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">tableViewSelectionDidChange</span><span class="params">(notification: NSNotification)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> tableview.selectedRow%<span class="number">2</span> == <span class="number">0</span>&#123;</span><br><span class="line">        editLineText.stringValue = lrcLirycsArr[tableview.selectedRow/<span class="number">2</span>]</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        editLineText.stringValue = lrcChineseArr[tableview.selectedRow/<span class="number">2</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中<code>tableview.selectedRow</code>直接可以访问当前tableview被选取的行，类型是Int</p>
+
+        
+          <!-- show an end symbol if the article is fully displayed -->
+          <hr/>
+          <p class="article-more-link">
+            <a>end</a>
+          </p>
+        
+      
+    </div>
+    
+    <div class="article-info">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-swift-init-Array-with-count" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/13/swift-init-Array-with-count/" class="article-date">
   	<time datetime="2015-03-13T07:56:46.000Z" itemprop="datePublished">2015-03-13</time>
 </a>
     </div>
@@ -196,7 +257,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/13/swift-init-String-with-count/">Swift中用count来批量初始化Array数组</a>
+      <a class="article-title" href="/2015/03/13/swift-init-Array-with-count/">Swift中用count来批量初始化Array数组</a>
     </h1>
   
 
