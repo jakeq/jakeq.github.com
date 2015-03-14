@@ -179,6 +179,69 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-set-NSDate-timezone" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/14/set-NSDate-timezone/" class="article-date">
+  	<time datetime="2015-03-14T01:45:47.000Z" itemprop="datePublished">2015-03-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/14/set-NSDate-timezone/">设置NSDate时区</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>设置NSDate时区为当地时区</p>
+<pre><code><span class="tag">var</span> date = <span class="function"><span class="title">NSDate</span><span class="params">()</span></span>
+<span class="tag">var</span> zone = NSTimeZone.<span class="function"><span class="title">systemTimeZone</span><span class="params">()</span></span>
+<span class="tag">var</span> interval = <span class="function"><span class="title">NSTimeInterval</span><span class="params">(zone.secondsFromGMTForDate(date)</span></span>)
+<span class="tag">var</span> localDate = date.<span class="function"><span class="title">dateByAddingTimeInterval</span><span class="params">(interval)</span></span>
+</code></pre>
+        
+          <!-- show an end symbol if the article is fully displayed -->
+          <hr/>
+          <p class="article-more-link">
+            <a>end</a>
+          </p>
+        
+      
+    </div>
+    
+    <div class="article-info">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/os-x/">os x</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-more-than-one-TextFieldDelegate" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -722,61 +785,10 @@ smlFile.<span class="function"><span class="title">parse</span><span class="para
 
 
   
-    <article id="post-Start-use-Hexo-blog" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2015/03/02/Start-use-Hexo-blog/" class="article-date">
-  	<time datetime="2015-03-02T14:23:35.000Z" itemprop="datePublished">2015-03-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/02/Start-use-Hexo-blog/">Mac中Hexo博客安装与使用教程</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/images/Github+Hexo.png" alt="Git Hexo"><br><a href="http://hexo.io/zh-cn/">Hexo</a>是一款轻量级的使用node.js平台的博客框架，与Jekyll和Octopress类似，使用Markdown来解析文章，但不同于Jekyll和Octopress的是，Hexo的编译速度非常快，据说Octopress微博适量达到50以上编译速度就会慢上几分钟之多，但是Hexo只需要几秒钟就可以了。本文来教大家如何在Mac中搭建Hexo，以及日常如何使用Hexo写博客，希望你看完本篇文章也加入到Hexo大家庭中来！<br>
-        <hr/>
-        <p class="article-more-link">
-          <a  href="/2015/03/02/Start-use-Hexo-blog/#more">more >></a>
-        </p>
-      
-    </div>
-    
-    <div class="article-info">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
