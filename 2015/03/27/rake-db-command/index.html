@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>rake db command | Jack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="rails学习笔记: rake db">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rake db command">
+<meta property="og:url" content="http://jakeq.github.com/2015/03/27/rake-db-command/index.html">
+<meta property="og:site_name" content="Jack">
+<meta property="og:description" content="rails学习笔记: rake db">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="rake db command">
+<meta name="twitter:description" content="rails学习笔记: rake db">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Jack" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="https://avatars3.githubusercontent.com/u/7218465?v=3&amp;s=460">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jack</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Inspire and empower</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives">rchives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/jakeq/" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1977153227/" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/blog/" style="font-size: 13.33px;">blog</a><a href="/tags/hexo/" style="font-size: 10px;">hexo</a><a href="/tags/ios/" style="font-size: 16.67px;">ios</a><a href="/tags/os-x/" style="font-size: 20px;">os x</a><a href="/tags/rails/" style="font-size: 13.33px;">rails</a><a href="/tags/ruby/" style="font-size: 10px;">ruby</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://hexo.io/zh-cn/">Hexo</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是Jack，从事IOS开发，喜欢Ruby，你呢？</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Jack</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars3.githubusercontent.com/u/7218465?v=3&amp;s=460">
+				<hgroup>
+				  <h1 class="header-author">Jack</h1>
+				</hgroup>
+			</div>
+			
+			<p class="header-subtitle">Inspire and empower</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">rchives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jakeq/" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1977153227/" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-rake-db-command" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/27/rake-db-command/" class="article-date">
+  	<time datetime="2015-03-27T11:20:48.000Z" itemprop="datePublished">2015-03-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      rake db command
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>rails学习笔记: rake db</p>
+<a id="more"></a>
+<p>命令行 </p>
+<pre><code>rake db：
+<span class="keyword">script</span>/generate model task <span class="property">name</span>:<span class="type">string</span> priority:<span class="type">integer</span>   
+<span class="keyword">script</span>/generate migration add_description_to_task description:<span class="type">string</span>   
+<span class="keyword">script</span>/generate migration remove_description_from_task description:<span class="type">string</span> 
+</code></pre><p>数据类型<br>引用</p>
+<pre><code><span class="pseudo">:string</span>, <span class="pseudo">:text</span>, <span class="pseudo">:integer</span>, <span class="pseudo">:float</span>,<span class="pseudo">:decimal</span>, <span class="pseudo">:datetime</span>, <span class="pseudo">:timestamp</span>, <span class="pseudo">:time</span>, <span class="pseudo">:date</span>, 
+<span class="pseudo">:binary</span>, <span class="pseudo">:boolean</span>
+</code></pre><p>与db有关的rake任务 </p>
+<pre><code><span class="keyword">db</span>:charset 检索当前环境下数据库的字符设置   
+<span class="keyword">db</span>:collation 检索当前环境下数据库的校对   
+<span class="keyword">db</span>:create 用config\database.yml中的定义创建当前 RAILS_ENV 项目环境下的数据库   
+<span class="keyword">db</span>:create:all 用config\database.yml中的定义创建所有数据库   
+<span class="keyword">db</span>:<span class="keyword">drop</span> 删除当前 RAILS_ENV项目环境中的数据库   
+<span class="keyword">db</span>:<span class="keyword">drop</span>:all 删除所有在 config\database.yml中定义的数据库   
+<span class="keyword">db</span>:reset 从<span class="keyword">db</span>\schema.rb中为当前环境重建数据库（先删后建）.   
+<span class="keyword">db</span>:rollback 回滚(清华出版社一本SQLSERVER书的名词[很奇怪为什么不直接用滚回])数据库到前一个版本. 指定回滚到哪一步要用 STEP=<span class="keyword">n</span> 参数   
+<span class="keyword">db</span>:<span class="keyword">version</span> 检索当前模式下的版本   
+</code></pre><p>备份数据库</p>
+<pre><code><span class="tag">rake</span> <span class="tag">db</span><span class="pseudo">:backup</span><span class="pseudo">:create</span> 根据<span class="tag">database</span><span class="class">.yml</span>的信息备份数据库
+<span class="tag">rake</span> <span class="tag">db</span><span class="pseudo">:backup</span><span class="pseudo">:destroy</span> 默认删除一天前的备份数据
+<span class="tag">rake</span> <span class="tag">db</span><span class="pseudo">:backup</span><span class="pseudo">:rebuild</span> 默认恢复最新的备份数据
+</code></pre><p>注意：这里设置的备份目录是db的backup目录，可以修改 </p>
+<p>添加索引<br>引用</p>
+<pre><code>add_index <span class="symbol">:acls</span>, [<span class="string">"action_id"</span>,<span class="string">"group_id"</span>],<span class="symbol">:unique=&gt;true</span> 
+add_index <span class="symbol">:acls</span>, <span class="symbol">:action_id</span> 
+
+drop all tables 删除全部表
+rake <span class="symbol">db:</span>migrate <span class="constant">VERSION=</span><span class="number">0</span>  
+</code></pre><p>指定恢复/删除：</p>
+<pre><code>rake <span class="pseudo">db</span>:migrate:<span class="preprocessor">down</span>/<span class="preprocessor">up</span> VERSION = version_of_migrati
+</code></pre><p>定义数字精确度</p>
+<pre><code>t.integer <span class="symbol">:total_price</span>, <span class="symbol">:precision=&gt;</span><span class="number">8</span>,<span class="symbol">:scale=&gt;</span><span class="number">2</span>,<span class="symbol">:default=&gt;</span><span class="number">0</span>
+</code></pre><hr>
+<pre><code>rake db:abort_if_pending_migrations  <span class="comment"># Raises an error if there are pending migrations</span>
+rake db:charset                      <span class="comment"># Retrieves the charset for the current environment's database</span>
+rake db:collation                    <span class="comment"># Retrieves the collation for the current environment's database</span>
+rake db:<span class="built_in">create</span>                       <span class="comment"># Create the database defined in config/database.yml for the current RAILS_ENV</span>
+rake db:<span class="built_in">create</span>:all                   <span class="comment"># Create all the local databases defined in config/database.yml</span>
+rake db:drop                         <span class="comment"># Drops the database for the current RAILS_ENV</span>
+rake db:drop:all                     <span class="comment"># Drops all the local databases defined in config/database.yml</span>
+rake db:fixtures:identify            <span class="comment"># Search for a fixture given a LABEL or ID.</span>
+rake db:fixtures:<span class="built_in">load</span>                <span class="comment"># Load fixtures into the current environment's database.</span>
+rake db:migrate                      <span class="comment"># Migrate the database through scripts in db/migrate.</span>
+rake db:migrate:down                 <span class="comment"># Runs the "down" for a given migration VERSION.</span>
+rake db:migrate:redo                 <span class="comment"># Rollbacks the database one migration and re migrate up.</span>
+rake db:migrate:reset                <span class="comment"># Resets your database using your migrations for the current environment</span>
+rake db:migrate:up                   <span class="comment"># Runs the "up" for a given migration VERSION.</span>
+rake db:reset                        <span class="comment"># Drops and recreates the database from db/schema.rb for the current environment.</span>
+rake db:rollback                     <span class="comment"># Rolls the schema back to the previous version.</span>
+rake db:schema:dump                  <span class="comment"># Create a db/schema.rb file that can be portably used against any DB supported by AR</span>
+rake db:schema:<span class="built_in">load</span>                  <span class="comment"># Load a schema.rb file into the database</span>
+rake db:sessions:<span class="built_in">clear</span>               <span class="comment"># Clear the sessions table</span>
+rake db:sessions:<span class="built_in">create</span>              <span class="comment"># Creates a sessions migration for use with CGI::Session::ActiveRecordStore</span>
+rake db:structure:dump               <span class="comment"># Dump the database structure to a SQL file</span>
+rake db:test:clone                   <span class="comment"># Recreate the test database from the current environment's database schema</span>
+rake db:test:clone_structure         <span class="comment"># Recreate the test databases from the development structure</span>
+rake db:test:<span class="built_in">load</span>                    <span class="comment"># Recreate the test database from the current schema.rb</span>
+rake db:test:prepare                 <span class="comment"># Check for pending migrations and load the test schema</span>
+rake db:test:purge                   <span class="comment"># Empty the test database</span>
+rake db:<span class="built_in">version</span>                      <span class="comment"># Retrieves the current schema version number</span>
+rake doc:app                         <span class="comment"># Build the app HTML Files</span>
+rake doc:clobber_app                 <span class="comment"># Remove rdoc products</span>
+rake doc:clobber_plugins             <span class="comment"># Remove plugin documentation</span>
+rake doc:clobber_rails               <span class="comment"># Remove rdoc products</span>
+rake doc:guides                      <span class="comment"># Generate Rails guides</span>
+rake doc:plugins                     <span class="comment"># Generate documentation for all installed plugins</span>
+rake doc:rails                       <span class="comment"># Build the rails HTML Files</span>
+rake doc:reapp                       <span class="comment"># Force a rebuild of the RDOC files</span>
+rake doc:rerails                     <span class="comment"># Force a rebuild of the RDOC files</span>
+rake gems                            <span class="comment"># List the gems that this rails application depends on</span>
+rake gems:build                      <span class="comment"># Build any native extensions for unpacked gems</span>
+rake gems:install                    <span class="comment"># Installs all required gems for this application.</span>
+rake gems:refresh_specs              <span class="comment"># Regenerate gem specifications in correct format.</span>
+rake gems:unpack                     <span class="comment"># Unpacks the specified gem into vendor/gems.</span>
+rake gems:unpack:dependencies        <span class="comment"># Unpacks the specified gems and its dependencies into vendor/gems</span>
+rake <span class="built_in">log</span>:<span class="built_in">clear</span>                       <span class="comment"># Truncates all *.log files in log/ to zero bytes</span>
+rake notes                           <span class="comment"># Enumerate all annotations</span>
+rake notes:custom                    <span class="comment"># Enumerate a custom annotation, specify with ANNOTATION=WTFHAX</span>
+rake notes:fixme                     <span class="comment"># Enumerate all FIXME annotations</span>
+rake notes:optimize                  <span class="comment"># Enumerate all OPTIMIZE annotations</span>
+rake notes:todo                      <span class="comment"># Enumerate all TODO annotations</span>
+rake rails:freeze:edge               <span class="comment"># Lock to latest Edge Rails, for a specific release use RELEASE=1.2.0</span>
+rake rails:freeze:gems               <span class="comment"># Lock this application to the current gems (by unpacking them into vendor/rails)</span>
+rake rails:unfreeze                  <span class="comment"># Unlock this application from freeze of gems or edge and return to a fluid use of system gems</span>
+rake rails:update                    <span class="comment"># Update both configs, scripts and public/javascripts from Rails</span>
+rake rails:update:configs            <span class="comment"># Update config/boot.rb from your current rails install</span>
+rake rails:update:javascripts        <span class="comment"># Update your javascripts from your current rails install</span>
+rake rails:update:scripts            <span class="comment"># Add new scripts to the application script/ directory</span>
+rake routes                          <span class="comment"># Print out all defined routes in match order, with names.</span>
+rake secret                          <span class="comment"># Generate a crytographically secure secret key.</span>
+rake stats                           <span class="comment"># Report code statistics (KLOCs, etc) from the application</span>
+rake test                            <span class="comment"># Run all unit, functional and integration tests</span>
+rake test:benchmark                  <span class="comment"># Run tests for benchmarkdb:test:prepare / Benchmark the performance tests</span>
+rake test:functionals                <span class="comment"># Run tests for functionalsdb:test:prepare / Run the functional tests in test/functional</span>
+rake test:integration                <span class="comment"># Run tests for integrationdb:test:prepare / Run the integration tests in test/integration</span>
+rake test:plugins                    <span class="comment"># Run tests for pluginsenvironment / Run the plugin tests in vendor/plugins/*/**/test (or specify with PLUGIN=name)</span>
+rake test:profile                    <span class="comment"># Run tests for profiledb:test:prepare / Profile the performance tests</span>
+rake test:recent                     <span class="comment"># Run tests for recentdb:test:prepare / Test recent changes</span>
+rake test:uncommitted                <span class="comment"># Run tests for uncommitteddb:test:prepare / Test changes since last checkin (only Subversion and Git)</span>
+rake test:units                      <span class="comment"># Run tests for unitsdb:test:prepare / Run the unit tests in test/unit</span>
+rake <span class="built_in">time</span>:zones:all                  <span class="comment"># Displays names of all time zones recognized by the Rails TimeZone class, grouped by offset.</span>
+rake <span class="built_in">time</span>:zones:<span class="built_in">local</span>                <span class="comment"># Displays names of time zones recognized by the Rails TimeZone class with the same offset as the system local time</span>
+rake <span class="built_in">time</span>:zones:us                   <span class="comment"># Displays names of US time zones recognized by the Rails TimeZone class, grouped by offset.</span>
+rake tmp:cache:<span class="built_in">clear</span>                 <span class="comment"># Clears all files and directories in tmp/cache</span>
+rake tmp:<span class="built_in">clear</span>                       <span class="comment"># Clear session, cache, and socket files from tmp/</span>
+rake tmp:<span class="built_in">create</span>                      <span class="comment"># Creates tmp directories for sessions, cache, and sockets</span>
+rake tmp:pids:<span class="built_in">clear</span>                  <span class="comment"># Clears all files in tmp/pids</span>
+rake tmp:sessions:<span class="built_in">clear</span>              <span class="comment"># Clears all files in tmp/sessions</span>
+rake tmp:sockets:<span class="built_in">clear</span>               <span class="comment"># Clears all files in tmp/sockets</span>
+</code></pre>
+        
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/03/14/set-NSDate-timezone/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">设置NSDate时区</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="rake-db-command" data-title="rake db command" data-url="http://jakeq.github.com/2015/03/27/rake-db-command/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jackq"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+	
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Jack
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?394d1329418067c35459c1cd10ffa89f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+  </div>
+</body>
+</html>
