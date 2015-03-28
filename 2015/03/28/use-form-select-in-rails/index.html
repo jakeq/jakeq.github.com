@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>use form.select in rails | Jack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在很多时候，下拉菜单选项是专门做一张查询表，显示里面的某个字段，这张查询表可能会被经常改动。所以，动态的下拉菜单是常见的。举个例子：
+在depot的实例中，收集订单信息时，有一项是选择付款方式，原例中是做成了一个死的数组形式，针对这个例子，下面进行改进，将这个死的下拉菜单变成动态形式。
+首先对于form.select方法来说，接受参数第一个是对象的字段，第二个是一个数组，数组的形式是[[displ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="use form.select in rails">
+<meta property="og:url" content="http://jakeq.github.com/2015/03/28/use-form-select-in-rails/index.html">
+<meta property="og:site_name" content="Jack">
+<meta property="og:description" content="在很多时候，下拉菜单选项是专门做一张查询表，显示里面的某个字段，这张查询表可能会被经常改动。所以，动态的下拉菜单是常见的。举个例子：
+在depot的实例中，收集订单信息时，有一项是选择付款方式，原例中是做成了一个死的数组形式，针对这个例子，下面进行改进，将这个死的下拉菜单变成动态形式。
+首先对于form.select方法来说，接受参数第一个是对象的字段，第二个是一个数组，数组的形式是[[displ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="use form.select in rails">
+<meta name="twitter:description" content="在很多时候，下拉菜单选项是专门做一张查询表，显示里面的某个字段，这张查询表可能会被经常改动。所以，动态的下拉菜单是常见的。举个例子：
+在depot的实例中，收集订单信息时，有一项是选择付款方式，原例中是做成了一个死的数组形式，针对这个例子，下面进行改进，将这个死的下拉菜单变成动态形式。
+首先对于form.select方法来说，接受参数第一个是对象的字段，第二个是一个数组，数组的形式是[[displ">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Jack" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="https://avatars3.githubusercontent.com/u/7218465?v=3&amp;s=460">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jack</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Inspire and empower</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives">rchives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/jakeq/" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1977153227/" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/blog/" style="font-size: 12px;">blog</a><a href="/tags/hexo/" style="font-size: 10px;">hexo</a><a href="/tags/ios/" style="font-size: 18px;">ios</a><a href="/tags/os-x/" style="font-size: 20px;">os x</a><a href="/tags/rails/" style="font-size: 16px;">rails</a><a href="/tags/ruby/" style="font-size: 14px;">ruby</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://hexo.io/zh-cn/">Hexo</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是Jack，从事IOS开发，喜欢Ruby，你呢？</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Jack</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars3.githubusercontent.com/u/7218465?v=3&amp;s=460">
+				<hgroup>
+				  <h1 class="header-author">Jack</h1>
+				</hgroup>
+			</div>
+			
+			<p class="header-subtitle">Inspire and empower</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">rchives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jakeq/" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1977153227/" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-use-form-select-in-rails" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/28/use-form-select-in-rails/" class="article-date">
+  	<time datetime="2015-03-28T01:18:30.000Z" itemprop="datePublished">2015-03-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      use form.select in rails
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在很多时候，下拉菜单选项是专门做一张查询表，显示里面的某个字段，这张查询表可能会被经常改动。所以，动态的下拉菜单是常见的。举个例子：</p>
+<p>在depot的实例中，收集订单信息时，有一项是选择付款方式，原例中是做成了一个死的数组形式，针对这个例子，下面进行改进，将这个死的下拉菜单变成动态形式。</p>
+<p>首先对于form.select方法来说，接受参数第一个是对象的字段，第二个是一个数组，数组的形式是[[display1, value1],[display2, value2],[display3, value3]]  display对应于下拉菜单的选项显示内容， value是要存入对象字段的值。</p>
+<p>理解了这点之后，我们着手改进。<br>思路是新建一个pay_types的表，里面存储付款类型和id号，在orders中修改pay_type字段为pay_type_id字段，作为外键与pay_types表进行约束。</p>
+<p>那么现在pay_types表中的两个字段用来构造上面那个数组[[display1, value1],[display2, value2],[display3, value3]] ，其中付款类型为display, id为value。在最终提交表单的时候将value存到orders表的pay_type_id字段。<br><a id="more"></a><br>实现过程以及代码如下：<br>首先是数据迁移的代码：<br>1<br><figure class="highlight ruby"><figcaption><span>ruby</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CreateOrders</span> <span class="inheritance">&lt; <span class="parent">ActiveRecord::Migration</span></span> </span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> </span><span class="keyword">self</span>.up </span><br><span class="line">    create_table <span class="symbol">:orders</span> <span class="keyword">do</span> |t| </span><br><span class="line">      t.column <span class="symbol">:name</span>, <span class="symbol">:string</span> </span><br><span class="line">      t.column <span class="symbol">:address</span>, <span class="symbol">:text</span> </span><br><span class="line">      t.column <span class="symbol">:email</span>, <span class="symbol">:string</span> </span><br><span class="line">      t.column <span class="symbol">:pay_type_id</span>, <span class="symbol">:integer</span>, <span class="symbol">:null=&gt;false</span>       </span><br><span class="line">    <span class="keyword">end</span> </span><br><span class="line">  <span class="keyword">end</span>  </span><br><span class="line">  <span class="function"><span class="keyword">def</span> </span><span class="keyword">self</span>.down </span><br><span class="line">    drop_table <span class="symbol">:orders</span> </span><br><span class="line">  <span class="keyword">end</span> </span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><br>2<br><figure class="highlight fsharp"><figcaption><span>ruby</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> CreatePayTypes &lt; ActiveRecord::Migration </span><br><span class="line">  def self.up </span><br><span class="line">    create_table :pay_types <span class="keyword">do</span> |t| </span><br><span class="line">      t.column :tp, :string, :<span class="keyword">null</span>=&gt;<span class="keyword">false</span> #付款类型 </span><br><span class="line">    <span class="keyword">end</span> </span><br><span class="line">  <span class="keyword">end</span>   </span><br><span class="line"><span class="comment">//SQL语句，建立约束</span></span><br><span class="line">  execute <span class="string">"alter table orders</span><br><span class="line">            add constraint fk_order_pay_types</span><br><span class="line">            foreign key (pay_type_id) references pay_types(id)"</span></span><br><span class="line">  def self.down </span><br><span class="line">    drop_table :pay_types </span><br><span class="line">  <span class="keyword">end</span> </span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>在Order模型类中加  <code>belongs_to :pay_type</code><br>在PayType模型类中加<code>has_one :order</code><br>收集订单信息<br><figure class="highlight erb"><figcaption><span>ruby</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">... </span><br><span class="line">  <span class="tag">&lt;<span class="title">fieldset</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="title">legend</span>&gt;</span> </span><br><span class="line">      Please Enter Your Details </span><br><span class="line">    <span class="tag">&lt;/<span class="title">legend</span>&gt;</span> </span><br><span class="line">    </span>&lt;%<span class="ruby">form_for <span class="symbol">:order</span>, <span class="symbol">:url=&gt;</span>&#123;<span class="symbol">:action=&gt;</span><span class="symbol">:save_order</span>&#125; <span class="keyword">do</span> |form|</span>%&gt;<span class="xml"> </span><br><span class="line">      <span class="tag">&lt;<span class="title">p</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"order_name"</span>&gt;</span>Name:<span class="tag">&lt;/<span class="title">label</span>&gt;</span> </span><br><span class="line">        </span>&lt;%=<span class="ruby">form.text_field <span class="symbol">:name</span>, <span class="symbol">:size=&gt;</span><span class="number">40</span></span>%&gt;<span class="xml"> </span><br><span class="line">      <span class="tag">&lt;/<span class="title">p</span>&gt;</span>      </span><br><span class="line">     ...      </span><br><span class="line">      <span class="tag">&lt;<span class="title">p</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"order_pay_type"</span>&gt;</span>Pay with:<span class="tag">&lt;/<span class="title">label</span>&gt;</span> </span><br><span class="line">        </span>&lt;%=<span class="ruby">form.select <span class="symbol">:pay_type_id</span>, <span class="variable">@types</span>, <span class="symbol">:prompt=&gt;<span class="string">"select a payment method"</span></span></span>%&gt;<span class="xml"> </span><br><span class="line">      <span class="tag">&lt;/<span class="title">p</span>&gt;</span> </span><br><span class="line">  </span>&lt;%=<span class="ruby">submit_tag <span class="string">"Place Order"</span></span>%&gt;<span class="xml"> </span><br><span class="line">        </span>&lt;%<span class="ruby"><span class="keyword">end</span></span>%&gt;<span class="xml"> </span><br><span class="line">  <span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span> </span><br><span class="line">...</span></span><br></pre></td></tr></table></figure></p>
+<p>这个@types在checkout这个action中这样定义：<br>      <code>@types=PayType.find_types</code><br>在PayType类中定义find_types:</p>
+<h1 id="类方法，生成数组">类方法，生成数组</h1><figure class="highlight lasso"><figcaption><span>ruby</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def <span class="built_in">self</span><span class="built_in">.</span>find_types </span><br><span class="line">  PayType<span class="built_in">.</span>find(:<span class="literal">all</span>, :<span class="keyword">order</span> <span class="subst">=&gt;</span> <span class="string">'tp'</span>)<span class="built_in">.</span>collect &#123; <span class="subst">|</span><span class="keyword">type</span><span class="subst">|</span> <span class="preprocessor">[</span><span class="keyword">type</span><span class="built_in">.</span>tp, <span class="keyword">type</span><span class="built_in">.</span>id<span class="preprocessor">]</span><span class="markup"> &#125; </span><br><span class="line">end</span></span><br></pre></td></tr></table></figure>  
+<p>在Order类中加入验证：</p>
+<pre><code>validates_presence_of <span class="symbol">:name</span>, <span class="symbol">:address</span>, <span class="symbol">:email</span> 
+  validates_format_of <span class="symbol">:email</span>, <span class="symbol">:with=&gt;/^</span>[a-zA-<span class="constant">Z0-</span><span class="number">9_</span>\.]+@[a-zA-<span class="constant">Z0-</span><span class="number">9</span>-]+[\.a-zA-<span class="constant">Z]</span>+<span class="variable">$/</span> 
+  validates_inclusion_of <span class="symbol">:pay_type_id</span>,<span class="symbol">:in</span> =&gt; <span class="constant">PayType.</span>find_types.map{|disp,value| value}
+</code></pre><hr>
+<p>但是，当所有数据全部填写正确，下拉菜单中选择了付款方式后，一切都没问题，但是如果有一项没有填写正确，包括下来菜单，也就是说无论当order对象的哪个字段成为null值，就会报错。错误信息如下：</p>
+<pre><code><span class="xml">You have a nil object when you didn't expect it! 
+You might have expected an instance of Array. 
+The error occurred while evaluating nil.inject
+
+Extracted source (around line #25):
+22:     
+23:       <span class="tag">&lt;<span class="title">p</span>&gt;</span>
+24:         <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"order_pay_type"</span>&gt;</span>Pay with:<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+25:         </span>&lt;%=<span class="ruby">form.select <span class="symbol">:pay_type_id</span>, <span class="variable">@types</span>, <span class="symbol">:prompt=&gt;<span class="string">"select a payment method"</span></span></span>%&gt;<span class="xml">
+26:       <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+27: 
+28:   </span>&lt;%=<span class="ruby">submit_tag <span class="string">"Place Order"</span>, <span class="symbol">:class=&gt;<span class="string">"submit"</span></span> </span>%&gt;<span class="xml"></span>
+</code></pre><p>期待解决。。。</p>
+<p>在AllenYoung 的文章中介绍了一个方法，当model变得多且复杂，要用到的下拉菜单多的情况下可以在applicationhelper.rb中定义下面的方法：</p>
+<figure class="highlight elixir"><figcaption><span>ruby</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_select_options_for</span>(symbol)    <span class="constant">Object.</span>const_get(symbol.to_s.capitalize).find(<span class="symbol">:all</span>, <span class="symbol">:order</span> =&gt; <span class="string">'name'</span>).collect &#123; |item| [item.name, item.id] &#125;.insert(<span class="number">0</span>, [<span class="string">'Please select...'</span>, <span class="keyword">nil</span>])    <span class="keyword">end</span></span></span><br></pre></td></tr></table></figure>  
+<p>通过类名来调用方法，得到数组。</p>
+
+        
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/03/28/difference-between-form-for-and-form-tag/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">difference between form_for and form_tag</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="use-form-select-in-rails" data-title="use form.select in rails" data-url="http://jakeq.github.com/2015/03/28/use-form-select-in-rails/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jackq"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+	
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Jack
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?394d1329418067c35459c1cd10ffa89f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+  </div>
+</body>
+</html>

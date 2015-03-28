@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>difference between form_for and form_tag | Jack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="下面介绍Ruby form的两种写法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="difference between form_for and form_tag">
+<meta property="og:url" content="http://jakeq.github.com/2015/03/28/difference-between-form-for-and-form-tag/index.html">
+<meta property="og:site_name" content="Jack">
+<meta property="og:description" content="下面介绍Ruby form的两种写法。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="difference between form_for and form_tag">
+<meta name="twitter:description" content="下面介绍Ruby form的两种写法。">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Jack" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="https://avatars3.githubusercontent.com/u/7218465?v=3&amp;s=460">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jack</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Inspire and empower</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives">rchives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/jakeq/" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1977153227/" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/blog/" style="font-size: 12px;">blog</a><a href="/tags/hexo/" style="font-size: 10px;">hexo</a><a href="/tags/ios/" style="font-size: 18px;">ios</a><a href="/tags/os-x/" style="font-size: 20px;">os x</a><a href="/tags/rails/" style="font-size: 16px;">rails</a><a href="/tags/ruby/" style="font-size: 14px;">ruby</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://hexo.io/zh-cn/">Hexo</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是Jack，从事IOS开发，喜欢Ruby，你呢？</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Jack</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars3.githubusercontent.com/u/7218465?v=3&amp;s=460">
+				<hgroup>
+				  <h1 class="header-author">Jack</h1>
+				</hgroup>
+			</div>
+			
+			<p class="header-subtitle">Inspire and empower</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">rchives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jakeq/" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1977153227/" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-difference-between-form-for-and-form-tag" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/28/difference-between-form-for-and-form-tag/" class="article-date">
+  	<time datetime="2015-03-28T00:44:20.000Z" itemprop="datePublished">2015-03-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      difference between form_for and form_tag
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>下面介绍Ruby form的两种写法。<br><a id="more"></a></p>
+<ol>
+<li>Ruby form写法一：使用form_for<figure class="highlight mel"><figcaption><span>rails</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt; % form_for :order, :url =&gt; &#123; :action =&gt; :save_order &#125; <span class="keyword">do</span> |form| <span class="variable">%&gt;</span></span><br><span class="line">&lt; p&gt;</span><br><span class="line">&lt; <span class="variable">%=</span> label :order, :name, <span class="string">"Name:"</span> <span class="variable">%&gt;</span></span><br><span class="line">&lt; <span class="variable">%=</span> form.text_field :name, :<span class="keyword">size</span> =&gt; <span class="number">40</span> <span class="variable">%&gt;</span>  </span><br><span class="line">&lt; /p&gt;</span><br><span class="line">&lt; p&gt;</span><br><span class="line">&lt; <span class="variable">%=</span> label :order, :address, <span class="string">"Address:"</span> <span class="variable">%&gt;</span></span><br><span class="line">&lt; <span class="variable">%=</span> form.text_area :address, :rows =&gt; <span class="number">3</span>, :cols =&gt; <span class="number">40</span> <span class="variable">%&gt;</span></span><br><span class="line">&lt; /p&gt;</span><br><span class="line">&lt; p&gt;</span><br><span class="line">&lt; <span class="variable">%=</span> label :order, :email, <span class="string">"E-Mail:"</span> <span class="variable">%&gt;</span></span><br><span class="line">&lt; <span class="variable">%=</span> form.text_field :email, :<span class="keyword">size</span> =&gt; <span class="number">40</span> <span class="variable">%&gt;</span></span><br><span class="line">&lt; /p&gt;</span><br><span class="line">&lt; <span class="variable">%=</span> submit_tag <span class="string">"Place Order"</span> , :class =&gt; <span class="string">"submit"</span> <span class="variable">%&gt;</span></span><br><span class="line">&lt; % end <span class="variable">%&gt;</span></span><br></pre></td></tr></table></figure>
+来看看解释<br>引用</li>
+</ol>
+<blockquote>
+<p>There are two interesting things in this code. First, the form_for helper on line 1 sets up a standard HTML form. But it does more. The first parameter, : order,tells the method that it’s dealing with an object in an instance variable named @order. The helper uses this information when naming fields and when arranging for the field values to be passed back to the controller.</p>
+<p>The :url parameter tells the helper what to do when the user hits the submit button. In this case, we’ll generate an HTTP POST request that’ll end up getting handled by the save_order action in the controller.</p>
+</blockquote>
+<p>而每个form的helper方法，如form.text_area,form_text_field,后面跟的符号，如:name,:address,:email，等都是这个model的属性。form_for后面跟的:order,就如dave所说，告诉方法这是一个实例变量。</p>
+<p>接下来看看，我们在方法中如何处理。<br><figure class="highlight ruby"><figcaption><span>rails</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> </span>save_order </span><br><span class="line">  <span class="variable">@cart</span> = find_cart </span><br><span class="line">  <span class="variable">@order</span> = <span class="constant">Order</span>.new(params[<span class="symbol">:order</span>]) </span><br><span class="line">  <span class="variable">@order</span>.add_line_items_from_cart(<span class="variable">@cart</span>) </span><br><span class="line">  <span class="keyword">if</span> <span class="variable">@order</span>.save </span><br><span class="line">    session[<span class="symbol">:cart</span>] = <span class="keyword">nil</span></span><br><span class="line">    redirect_to_index(<span class="string">"Thank you for your order"</span>) </span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    render <span class="symbol">:action=&gt;</span><span class="symbol">:checkout</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><br>如何得到这个实例变量order呢。</p>
+<p>只用一句话<br><code>@order = Order.new(params[:order])</code></p>
+<p>非常简洁。只要在html.erb页面中配置好。</p>
+<hr>
+<ol>
+<li>Ruby form写法二：form_tag  </li>
+</ol>
+<figure class="highlight xml"><figcaption><span>rails</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; % <span class="attribute">form_tag</span> &#123;<span class="attribute">:action</span> =&gt;</span> :login&#125; do %&gt;</span><br><span class="line"><span class="tag">&lt; <span class="attribute">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt; <span class="attribute">label</span> <span class="attribute">for</span>=<span class="value">"name"</span>&gt;</span>Name:<span class="tag">&lt; /<span class="attribute">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt; %= <span class="attribute">text_field_tag</span> <span class="attribute">:name</span>, <span class="attribute">params</span>[<span class="attribute">:name</span>] %&gt;</span></span><br><span class="line"><span class="tag">&lt; /<span class="attribute">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt; <span class="attribute">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt; <span class="attribute">label</span> <span class="attribute">for</span>=<span class="value">"password"</span>&gt;</span>Password:<span class="tag">&lt; /<span class="attribute">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt; %= <span class="attribute">password_field_tag</span> <span class="attribute">:password</span>, <span class="attribute">params</span>[<span class="attribute">:password</span>] %&gt;</span></span><br><span class="line"><span class="tag">&lt; /<span class="attribute">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt; <span class="attribute">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt; %= <span class="attribute">submit_tag</span> "<span class="attribute">Login</span>" %&gt;</span></span><br><span class="line"><span class="tag">&lt; /<span class="attribute">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt; % <span class="attribute">end</span> %&gt;</span></span><br></pre></td></tr></table></figure>
+<p>来看解释</p>
+<p>引用</p>
+<blockquote>
+<p>This form is different from ones we’ve seen earlier. Rather than using form_for,it uses form_tag, which simply builds a regular HTML &lt; form&gt;. Inside that form, it uses text_field_tag and password_field_tag, two helpers that create HTML &lt; input&gt; tags. Each helper takes two parameters. The first is the name to give to the field, and the second is the value with which to populate the field. This style of form allows us to associate values in the params structure directly with form fields—no model object is required. In our case, we chose to use the params object directly in the form. An alternative would be to have the controller set instance variables.</p>
+</blockquote>
+<p>form_tag的写法，没有将属性与model绑定起来，而是直接写属性名。每个helper方法都有两个参数，一个是域的名字，另一个是域的值。</p>
+<p>来看在controller里如何处理<br><figure class="highlight ruby"><figcaption><span>rails</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> </span>login </span><br><span class="line">   user = <span class="constant">User</span>.authenticate(params[<span class="symbol">:name</span>], params[<span class="symbol">:password</span>]) </span><br><span class="line">   <span class="keyword">if</span> user </span><br><span class="line">      session[<span class="symbol">:user_id</span>] = user.id </span><br><span class="line">      redirect_to(<span class="symbol">:action</span> =&gt; <span class="string">"index"</span> ) </span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">      flash.now[<span class="symbol">:notice</span>] = <span class="string">"Invalid user/password combination"</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><br>这次在页面中因为没有将属性与model绑定，所以也不能像form_for那样，直接生成一个model，但是可以取值。取值时，可以取页面中form的helper方法的第二个参数。(这样不又跟jsp有些像了么) </p>
+
+        
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/03/28/use-form-select-in-rails/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          use form.select in rails
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/03/27/rake-db-command/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">rake db command</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="difference-between-form-for-and-form-tag" data-title="difference between form_for and form_tag" data-url="http://jakeq.github.com/2015/03/28/difference-between-form-for-and-form-tag/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jackq"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+	
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Jack
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?394d1329418067c35459c1cd10ffa89f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+  </div>
+</body>
+</html>
